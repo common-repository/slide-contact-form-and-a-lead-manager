@@ -1,0 +1,30 @@
+
+
+#sc_form_div input, #sc_form_div select, #sc_form_div img{ margin-left:20px;}
+
+.warranty {
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.foo_credit{
+	clear:both;	
+	float:right;
+	margin-right:20px;
+	display:inline;
+	border:1px solid #e6db55;
+	background:#fffbcc;
+	padding:5px 10px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+
+.sc_color_div{ display:block; float:left; width:24px; height:24px; margin-left:5px; }
+
+.sc_admin_image_preview{ margin-top:10px;}
+.sc_admin_image_preview img{ border:1px solid #dfdfdf; background:#ffffff; padding:10px;}

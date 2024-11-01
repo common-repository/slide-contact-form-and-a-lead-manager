@@ -1,0 +1,225 @@
+
+#drawer *{padding:0; margin:0}
+#drawer{
+	width:345px;
+	overflow:hidden;
+	text-align:left;
+	position:fixed;
+	/*left:-315px; /*give inline to work js properly*/
+	top:10px;
+	z-index:1000;
+	
+	-moz-border-radius-topright :15px;
+	-moz-border-radius-bottomright :15px;
+	-webkit-border-top-right-radius:15px;
+	-webkit-border-bottom-right-radius:15px;
+	
+	border:1px solid #123e66;
+	border-left:0;
+	background-color:#123e66;
+}
+#drawer-content{
+	width:313px;/*314*/
+	color: #1d1d20;	
+	position:relative;
+	float:left;
+	background-color:#fff;
+}
+#drawerTab{
+	width:28px;
+	height:100%;
+	overflow:hidden;
+	cursor:pointer;
+	
+	position:absolute;
+	right:-28px; /*atleast equivalent to its width*/
+	top:0;
+}
+#drawerTab b{
+	width:100%;
+	height:100%;
+	text-indent:-1000px;
+	overflow:hidden;
+	display:block;
+	cursor:pointer;
+	background:url(../images/drwr_hdr.png) no-repeat center center;
+}
+#drawer-content form{
+	width:258px;/*312*/
+	padding:10px;
+}
+#drawer-content form label{
+	width:100%;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:31px;
+	text-indent:9px;
+	display:block;
+	position:relative;
+}
+#drawer-content form label i.drwr-mendatory{
+	font-size:1.8em;
+	color:#f00;
+	text-indent:0;
+	position:absolute;
+	left:-4px;
+	top:3px;
+}
+#drawer-content form input.mendatory_error{color:#f00}
+
+#drawer-content form input.drwr-txtInp,
+#drawer-content form textarea.drwr-txtArea{
+	width:218px;/*258*/
+	padding:8px 15px 8px 25px;
+	line-height:100%;
+	background:url(../images/drwr-inp-err.gif) no-repeat 8px -200px; /*bg is just loaded but dont show it now*/
+	border:none;
+	display:block;
+	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border:1px solid #67a9de;
+	border-color:#67a9de;
+	background-color:#dcebf5;
+}
+#drawer-content form textarea.drwr-txtArea{
+	width:220px;/*258*/
+	height:77px;/*101*/
+}
+#drawer-content form input.drwr_inpErr{
+	background-position:8px center;
+}
+#drawer-content form textarea.drwr_txtErr{
+	background-position:8px 8px;
+}
+
+#drawer-content form #verify{width:100%; overflow:hidden}
+#drawer-content form #verify label b{font-weight:normal; float:left}
+#drawer-content form #verify label em{width:100px; font-style:normal; float:right; position:relative}
+#drawer-content form #verify img{float:left; margin:2px 5px 0 0}
+#drawer-content form #verify input.drwr-txtInp{width:75px; padding-right:5px; float:right}
+
+#submitDiv{
+	width:100%;
+	padding:20px 0 15px;
+	overflow:hidden;
+}
+#submitDiv p{
+	width:auto;
+	color:#f00;
+	font:normal 12px/25px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	float:left;
+}
+#drawer-content form input.drwr-butnSubmit{ /*submit-butn; inherited from default*/
+	width:133px;
+	height:34px;
+	text-indent:-1000px;
+	overflow:hidden;
+	border:none;
+	float:right;
+	cursor:pointer;
+	background:url(../images/drwr-submit.png) no-repeat;
+}
+#drawer-content input.drwr-butnSubmit::-moz-focus-inner{ /*to remove outline just from Mozilla*/
+    border:none;
+}
+
+div.drwr-wait{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	
+	display:none;
+}
+div.drwr-wait span{
+	width:100%;
+	height:100%;
+	background:#fff;
+	display:block;
+	opacity: 0.60; filter:alpha(opacity=60); /* IE's opacity*/
+}
+div.drwr-wait i{
+	width:100%;
+	height:100%;
+	display:block;
+	background:url(../images/drwr-loader.gif) no-repeat center;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;
+}
+#drawer-content .drwr-msg{
+	padding:20px;
+	display:none;
+}
+
+#drawer-content .drwr-ftr{ font-size:9px; font-family:Verdana, Arial, Helvetica, sans-serif; width:100%; padding:0; position:absolute; bottom:0; left:0; text-align:left;}
+#drawer-content .drwr-ftr a{ color:#333333; text-decoration:none;}
+#drawer-content .drwr-ftr a:hover{ text-decoration:underline;}
+
+
+/*==================================================
+				shortcode form styles
+===================================================*/
+
+#sc_form{ width:420px; margin:0 auto; }
+#sc_form p{ width:100%; overflow:hidden; clear:both; padding:0; margin:0; padding-bottom:4px; }
+#sc_form p label{ float:left; width:140px; padding-right:10px; text-align:right; }
+#sc_form p input, #sc_form p textarea{ float:left; }
+#sc_form p input{ width:200px; }
+#sc_form p textarea{ width:260px; height:100px; }
+
+#sc_form p #sc_submit_sc{ width:75px; -moz-border-radius:5px; -webkit-border-radius:5px; border:1px solid #333333; }
+
+#sc_form .mess{/* display:none; */margin-bottom:10px; text-align:center; }
+#sc_form .mess span{ display:block; padding:4px 10px; color:#333333; font-weight:bold; font-size:11px; -moz-border-radius:5px; -webkit-border-radius:5px;  }
+#sc_form .mess span.err{  background:#ffebe8; border:1px solid #cc0000; }
+#sc_form .mess span.succ{ background:#fffbcc; border:1px solid #e6db55; }
+
+
+/*==================================================
+					IE Fixing
+===================================================*/
+/* "position:fixed" is not supported in ie6+7*/
+#drawer{
+	*position:absolute;
+	*top:   expression((10 + (ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop)) + 'px');
+	*right: expression((0 + (ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft)) + 'px');
+}
+/* "height:100%" not works due to positioning in ie6 only*/
+*html #drawerTab{
+	right:-32px;
+	height:expression(eval(document.getElementById("drawer-content").offsetHeight)+'px');
+}
+*html #drawerTab b{
+	width:11px; /*set manually bg width*/
+	height:91px; /*set manually bg height*/
+	margin-top:expression(eval(this.parentNode.offsetHeight-this.offsetHeight)/2+'px');
+	margin-left:expression(eval(this.parentNode.offsetWidth-this.offsetWidth)/2+'px');
+	azimuth: expression(
+	this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+	this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+	this.src = "images/blank.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+	this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+	this.runtimeStyle.backgroundImage = "none")),this.pngSet=true
+	);
+}
+*html #drawer-content form input.drwr-butnSubmit{
+	azimuth: expression(
+	this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+	this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+	this.src = "images/blank.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+	this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+	this.runtimeStyle.backgroundImage = "none")),this.pngSet=true
+	);
+}
+*html div.drwr-wait{height:expression(eval(document.getElementById("drawer-content").offsetHeight)+'px');}
+
+
+
+
+
